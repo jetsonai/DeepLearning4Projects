@@ -62,7 +62,7 @@ class Inference_Class():
         opencv_rgb = cv2.cvtColor(opencv_frame, cv2.COLOR_BGR2RGB)
         image = Image.fromarray(opencv_rgb)
         image_tensor = self.transform_info(image)
-        image_tensor.unsqueeze(0)
+        image_tensor = image_tensor.unsqueeze(0)
         image_tensor = image_tensor.to(self.DEVICE)
 
         inference_result = self.model(image_tensor)
