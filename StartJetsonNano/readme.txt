@@ -1,11 +1,14 @@
-cd
-cd jetbot_new/StartDL
+
+git clone https://github.com/jetsonai/DeepLearning4Projects
+
+cd DeepLearning4Projects/StartJetsonNano
+
 chmod 777 *.sh
+
+./install_nano_basic.sh
 
 ./install-pytorch.sh
    -> It might take more than 40 minutes.
-   
- pip3 install tqdm
    
 ./install_torch2trt.sh
 
@@ -14,8 +17,7 @@ chmod 777 *.sh
 python3
 
 import torch
-
-git clone https://github.com/JetsonHacksNano/installSwapfile
+import torchvision
 
 cd installSwapfile
 
