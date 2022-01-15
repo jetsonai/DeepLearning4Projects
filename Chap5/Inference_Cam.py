@@ -8,6 +8,10 @@ from Model_Class_From_the_Scratch import MODEL_From_Scratch
 from Model_Class_Transfer_Learning_MobileNet import MobileNet
 import argparse
 
+gst_str = ("v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! videoconvert ! video/x-raw,width=640,height=480,format=BGR ! appsink")
+
+import cv2
+
 class Inference_Class():
     def __init__(self):
         USE_CUDA = torch.cuda.is_available()
@@ -34,21 +38,21 @@ class Inference_Class():
         self.model.eval()
 
     def inference_video(self, video_source="test_video.mp4"):
-        cap = cv2.VideoCapture(video_source)
+        cap = cv2.VideoCapture(gst_str)
         if cap.isOpened():
             print("Video Opened")
         else:
             print("Video Not Opened")
             print("Program Abort")
             exit()
-        cv2.namedWindow("Input", cv2.WINDOW_GUI_EXPANDED)
+        #cv2.namedWindow("Input", cv2.WINDOW_GUI_EXPANDED)
         cv2.namedWindow("Output", cv2.WINDOW_GUI_EXPANDED)
         with torch.no_grad():
             while cap.isOpened():
                 ret, frame = cap.read()
                 if ret:
                     output = self.inference_frame(frame)
-                    cv2.imshow("Input", frame)
+                    #cv2.imshow("Input", frame)
                     cv2.imshow("Output", output)
                 else:
                     break
