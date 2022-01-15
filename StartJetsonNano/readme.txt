@@ -12,6 +12,9 @@ chmod 777 *.sh
    
 ./install_torch2trt.sh
 
+
+No module named 'packaging'
+
 # To Check
 
 python3
