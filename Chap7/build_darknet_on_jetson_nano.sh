@@ -10,3 +10,4 @@ mv vocdata.txt darknet/
 mv yolov4-tiny_voc.cfg darknet/
 mv yolov4-tiny_voc_last.weights darknet/
 mv darknet_video.py darknet/
+mv challenge.mp4 darknet/
