@@ -80,7 +80,7 @@ class Inference_Class():
         return result_frame
     
     def inference_image(self, opencv_image):
-        opencv_rgb = cv2.cvtColor(opencv_frame, cv2.COLOR_BGR2RGB)
+        opencv_rgb = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
         image = Image.fromarray(opencv_rgb)
         image_tensor = self.transform_info(image)
         image_tensor = image_tensor.unsqueeze(0)
