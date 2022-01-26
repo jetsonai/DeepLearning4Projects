@@ -85,12 +85,12 @@ class Inference_Class():
         image_tensor = self.transform_info(image)
         image_tensor = image_tensor.unsqueeze(0)
         image_tensor = image_tensor.to(self.DEVICE)
-
-        inference_result = self.model(image_tensor)
+        with torch.no_grad():
+            inference_result = self.model(image_tensor)
 
         inference_result = inference_result.squeeze()
         inference_result = inference_result.cpu().numpy()
-        result_frame = np.copy(opencv_frame)
+        result_frame = np.copy(opencv_image)
         label_text = self.label_map[np.argmax(inference_result)]
         class_prob = str(inference_result[np.argmax(inference_result)])
         result_frame = cv2.putText(result_frame, label_text + " " + class_prob, (10, 50), cv2.FONT_HERSHEY_PLAIN, fontScale=2.0, color=(0,0,255), thickness=3)
