@@ -11,7 +11,7 @@ from queue import Queue
 
 def parser():
     parser = argparse.ArgumentParser(description="YOLO Object Detection")
-    parser.add_argument("--input", type=str, default="challenge.mp4",
+    parser.add_argument("--input", type=str, default="blackbox_video.avi",
                         help="video source. If empty, uses webcam 0 stream")
     parser.add_argument("--out_filename", type=str, default="",
                         help="inference video name. Not saved if empty")
@@ -133,10 +133,25 @@ def inference(darknet_image_queue, detections_queue, fps_queue):
         darknet.free_image(darknet_image)
     cap.release()
 
-
+def draw_boxes(detections, image, colors, frame_number):
+    detection_index = 0
+    for label, confidence, bbox in detections:
+        left, top, right, bottom = bbox2points(bbox)
+        if label == "car":
+            car_img = np.copy(image[top:bottom, left:right])
+            save_path = "./detected/frame_{}_index_{}.png".format(frame_number, detection_index)
+            cv2.imwrite(save_path, car_img)
+        cv2.rectangle(image, (left, top), (right, bottom), colors[label], 1)
+        cv2.putText(image, "{} [{:.2f}]".format(label, float(confidence)),
+                    (left, top - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
+                    colors[label], 2)
+    return image
+    
 def drawing(frame_queue, detections_queue, fps_queue):
     random.seed(3)  # deterministic bbox colors
     video = set_saved_video(cap, args.out_filename, (video_width, video_height))
+    frame_number = 0
+    os.mkdirs("./detected",exist_ok=True)
     while cap.isOpened():
         frame = frame_queue.get()
         detections = detections_queue.get()
@@ -146,7 +161,8 @@ def drawing(frame_queue, detections_queue, fps_queue):
             for label, confidence, bbox in detections:
                 bbox_adjusted = convert2original(frame, bbox)
                 detections_adjusted.append((str(label), confidence, bbox_adjusted))
-            image = darknet.draw_boxes(detections_adjusted, frame, class_colors)
+            image = draw_boxes(detections_adjusted, frame, class_colors, frame_number)
+            frame_number += 1
             if not args.dont_show:
                 cv2.imshow('Inference', image)
             if args.out_filename is not None:
