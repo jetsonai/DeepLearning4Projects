@@ -7,6 +7,7 @@ import darknet
 import argparse
 from threading import Thread, enumerate
 from queue import Queue
+import numpy as np
 
 
 def parser():
@@ -134,13 +135,18 @@ def inference(darknet_image_queue, detections_queue, fps_queue):
     cap.release()
 
 def draw_boxes(detections, image, colors, frame_number):
+    origin = np.copy(image)
     detection_index = 0
     for label, confidence, bbox in detections:
         left, top, right, bottom = bbox2points(bbox)
         if label == "car":
-            car_img = np.copy(image[top:bottom, left:right])
+            car_img = origin[top:bottom, left:right]
+            height, width = car_img.shape[0], car_img.shape[1]
+            if height <= 0 or width <= 0:
+                continue
             save_path = "./detected/frame_{}_index_{}.png".format(frame_number, detection_index)
             cv2.imwrite(save_path, car_img)
+            detection_index += 1
         cv2.rectangle(image, (left, top), (right, bottom), colors[label], 1)
         cv2.putText(image, "{} [{:.2f}]".format(label, float(confidence)),
                     (left, top - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
@@ -151,7 +157,7 @@ def drawing(frame_queue, detections_queue, fps_queue):
     random.seed(3)  # deterministic bbox colors
     video = set_saved_video(cap, args.out_filename, (video_width, video_height))
     frame_number = 0
-    os.mkdirs("./detected",exist_ok=True)
+    os.makedirs("./detected",exist_ok=True)
     while cap.isOpened():
         frame = frame_queue.get()
         detections = detections_queue.get()
