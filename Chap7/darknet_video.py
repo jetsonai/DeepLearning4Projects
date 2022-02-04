@@ -138,7 +138,7 @@ def draw_boxes(detections, image, colors, frame_number):
     origin = np.copy(image)
     detection_index = 0
     for label, confidence, bbox in detections:
-        left, top, right, bottom = bbox2points(bbox)
+        left, top, right, bottom = darknet.bbox2points(bbox)
         if label == "car":
             car_img = origin[top:bottom, left:right]
             height, width = car_img.shape[0], car_img.shape[1]
