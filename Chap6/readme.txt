@@ -25,7 +25,7 @@ python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt
 ## 로깅 추가
 
 # 영상 파일 추론
-python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt ./data/detect_cctv.mp4
+python3 my_ssd_opencv_cctv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt ./data/detect_cctv.mp4
 
 # USB 카메라 추론
-python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt
+python3 my_ssd_opencv_cctv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt
