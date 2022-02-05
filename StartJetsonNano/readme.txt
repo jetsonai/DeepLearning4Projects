@@ -24,6 +24,7 @@ import torchvision
 
 cd installSwapfile
 
+chmod 777 *.sh
 ./installSwapfile.sh
 
 sudo reboot
