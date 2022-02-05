@@ -11,3 +11,6 @@ sudo -H pip install -U jetson-stats
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 
 pip3 install tqdm
+
+pip3 install packaging
+
