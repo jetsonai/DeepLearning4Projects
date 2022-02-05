@@ -36,6 +36,15 @@ cp ~/Downloads/labels.txt ./onnx/
 
 cp ~/Downloads/mb1-ssd-cctv.pth ./onnx/
 
+python3 run_ssd_example.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt ./data/drivingcar.jpg
+
+python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt ./data/run3.mp4
+
+# USB Camera
+python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt
+
+python3 my_ssd_opencv.py mb1-ssd onnx/mb1-ssd-cctv.pth ./onnx/labels.txt ./data/detect_cctv.mp4
+
 # pth -> onnx 변환
 
 python3 onnx_export.py --model-dir=./onnx 
