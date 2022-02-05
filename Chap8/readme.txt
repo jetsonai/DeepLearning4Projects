@@ -7,7 +7,7 @@ cd jetson-inference
 
 git checkout 19ed62150b3e9499bad2ed6be1960dd38002bb7d
 
-git submodule update –init
+git submodule update --init
 
 #라이브러리 빌드(컴파일)
 mkdir build
