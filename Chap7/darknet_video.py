@@ -86,26 +86,6 @@ def convert2original(image, bbox):
     return bbox_converted
 
 
-def convert4cropping(image, bbox):
-    x, y, w, h = convert2relative(bbox)
-
-    image_h, image_w, __ = image.shape
-
-    orig_left    = int((x - w / 2.) * image_w)
-    orig_right   = int((x + w / 2.) * image_w)
-    orig_top     = int((y - h / 2.) * image_h)
-    orig_bottom  = int((y + h / 2.) * image_h)
-
-    if (orig_left < 0): orig_left = 0
-    if (orig_right > image_w - 1): orig_right = image_w - 1
-    if (orig_top < 0): orig_top = 0
-    if (orig_bottom > image_h - 1): orig_bottom = image_h - 1
-
-    bbox_cropping = (orig_left, orig_top, orig_right, orig_bottom)
-
-    return bbox_cropping
-
-
 def video_capture(frame_queue, darknet_image_queue):
     while cap.isOpened():
         ret, frame = cap.read()
