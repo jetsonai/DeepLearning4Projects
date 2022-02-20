@@ -37,5 +37,10 @@ cp ~/Downloads/labels.txt ./onnx/
 cp ~/Downloads/mb1-ssd-cctv.pth ./onnx/
 
 # pth -> onnx 변환
+python3 onnx_export.py --model-dir=./onnx --input=mb1-ssd-cctv.pth --labels=labels.txt
 
-python3 onnx_export.py --model-dir=./onnx 
+ls ./onnx/ssd-mobilenet.onnx
+
+detectnet --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
+
+
