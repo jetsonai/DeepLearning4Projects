@@ -43,4 +43,8 @@ ls ./onnx/ssd-mobilenet.onnx
 
 detectnet --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
 
+python3 my_ssd_detectnet.py --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
+
+
+
 
