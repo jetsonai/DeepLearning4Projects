@@ -26,3 +26,9 @@ chmod 777 *.sh
 ./installSwapfile.sh
 
 sudo reboot
+
+
+
+
+sudo sh -c 'echo 50 > /sys/devices/pwm-fan/target_pwm'
+
