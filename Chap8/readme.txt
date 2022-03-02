@@ -24,6 +24,8 @@ sudo make install
 
 sudo ldconfig
 
+-----------------------------------------------------------------------------------
+# 만약 pytorch-ssd 폴더가 없으면 다시 받는다. 하지만 6장 실습에서 받아놓았을 것이다.
 cd
 git clone https://github.com/jetsonai/pytorch-ssd
 
@@ -31,6 +33,9 @@ cd pytorch-ssd
 
 #onnx 파일 보관 폴더 생성
 mkdir onnx
+-----------------------------------------------------------------------------------
+
+cd pytorch-ssd
 
 cp ~/Downloads/labels.txt ./onnx/
 
@@ -40,6 +45,10 @@ cp ~/Downloads/mb1-ssd-cctv.pth ./onnx/
 python3 onnx_export.py --model-dir=./onnx --input=mb1-ssd-cctv.pth --labels=labels.txt
 
 ls ./onnx/ssd-mobilenet.onnx
+
+cp -rf /onnx/ ~/Ai-LearningBot/followingbot
+
+cd ~/Ai-LearningBot/followingbot
 
 detectnet --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
 
