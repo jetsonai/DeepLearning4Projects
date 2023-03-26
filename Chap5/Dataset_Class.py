@@ -5,6 +5,7 @@ from PIL import Image
 
 class PyTorch_Custom_Dataset_Class(Dataset):
     def __init__(self):
+        super().__init__()
         pass
     def __getitem__(self, idx):
         pass
@@ -16,6 +17,7 @@ class PyTorch_Classification_Dataset_Class(Dataset):
     def __init__(self
                 , dataset_dir = "/content/Recycle_Classification_Dataset"
                 , transform = None):
+        super().__init__()
         if not os.path.isdir(dataset_dir):
             os.system("git clone https://github.com/JinFree/Recycle_Classification_Dataset.git")
             os.system("rm -rf ./Recycle_Classification_Dataset/.git")
