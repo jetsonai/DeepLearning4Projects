@@ -24,6 +24,8 @@ sudo make install
 
 sudo ldconfig
 
+
+
 -----------------------------------------------------------------------------------
 # 만약 pytorch-ssd 폴더가 없으면 다시 받는다. 하지만 6장 실습에서 받아놓았을 것이다.
 cd
@@ -50,9 +52,9 @@ cp -rf /onnx/ ~/Ai-LearningBot/followingbot
 
 cd ~/Ai-LearningBot/followingbot
 
-detectnet --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
+detectnet --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes 
 
-python3 my_ssd_detectnet.py --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes /dev/video0
+python3 my_ssd_detectnet.py --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt  --input-blob=input_0 --output-cvg=scores --output-bbox=boxes
 
 
 
