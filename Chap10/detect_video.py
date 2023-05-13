@@ -191,13 +191,6 @@ class YoLov5TRT(object):
         # Remove any context from the top of the context stack, deactivating it.
         self.ctx.pop()
         
-        
-    def get_raw_image_zeros(self):
-        """
-        description: Ready data for warmup
-        """
-        for _ in range(self.batch_size):
-            yield np.zeros([self.input_h, self.input_w, 3], dtype=np.uint8)
 
     def preprocess_image(self, raw_bgr_image):
         """
@@ -380,9 +373,16 @@ class warmUpThread(threading.Thread):
     def __init__(self, yolov5_wrapper):
         threading.Thread.__init__(self)
         self.yolov5_wrapper = yolov5_wrapper
+    
+    def get_raw_image_zeros(self):
+        """
+        description: Ready data for warmup
+        """
+        for _ in range(self.batch_size):
+            yield np.zeros([self.input_h, self.input_w, 3], dtype=np.uint8)
 
     def run(self):
-        batch_image_raw, use_time = self.yolov5_wrapper.infer(self.yolov5_wrapper.get_raw_image_zeros())
+        batch_image_raw, use_time = self.yolov5_wrapper.infer(self.get_raw_image_zeros())
         print('warm_up->{}, time->{:.2f}ms'.format(batch_image_raw[0].shape, use_time * 1000))
 
 
