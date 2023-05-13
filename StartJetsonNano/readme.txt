@@ -7,7 +7,7 @@ chmod 777 *.sh
 
 ./install_nano_basic.sh
 
-./install-pytorch.sh
+./installPyTorch1_8.sh
    -> It might take more than 40 minutes.
    
 ./install_torch2trt.sh
