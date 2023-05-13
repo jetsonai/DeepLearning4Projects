@@ -404,8 +404,8 @@ class warmUpThread(threading.Thread):
 
 if __name__ == "__main__":
     # load custom plugin and engine
-    PLUGIN_LIBRARY = "build/libmyplugins.so"
-    engine_file_path = "build/yolov5s_voc.engine"
+    PLUGIN_LIBRARY = "~/tensorrtx/yolov5/build/libmyplugins.so"
+    engine_file_path = "~/tensorrtx/yolov5/build/yolov5s_voc.engine"
 
     if len(sys.argv) > 1:
         engine_file_path = sys.argv[1]
