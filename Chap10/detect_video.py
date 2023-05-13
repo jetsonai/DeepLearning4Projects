@@ -2,11 +2,11 @@
 An example that uses TensorRT's Python api to make inferences.
 """
 # gst_str = ("v4l2src device=/dev/video1 ! \
-#     video/x-raw, width=320, height=240, format=(string)YUY2,framerate=30/1 ! \
-#     videoconvert ! video/x-raw,width=320,height=240,format=BGR ! \
+#     video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! \
+#     videoconvert ! video/x-raw,width=640,height=480,format=BGR ! \
 #     appsink")
-gst_str = ("data\crosswalk_cctv_01.mp4")
-# gst_str = ("data\crosswalk_cctv_02.mp4")
+gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_01.mp4"
+# gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_02.mp4"
 
 import ctypes
 import os
@@ -401,7 +401,7 @@ class warmUpThread(threading.Thread):
 if __name__ == "__main__":
     # load custom plugin and engine
     PLUGIN_LIBRARY = "build/libmyplugins.so"
-    engine_file_path = "build/yolov5s.engine"
+    engine_file_path = "build/yolov5s_voc.engine"
 
     if len(sys.argv) > 1:
         engine_file_path = sys.argv[1]
