@@ -48,7 +48,7 @@ python3 onnx_export.py --model-dir=./onnx --input=mb1-ssd-cctv.pth --labels=labe
 
 ls ./onnx/ssd-mobilenet.onnx
 
-cp -rf /onnx/ ~/Ai-LearningBot/followingbot
+cp -rf ./onnx/ ~/AILearningJetbot/followingbot
 
 cd ~/Ai-LearningBot/followingbot
 
