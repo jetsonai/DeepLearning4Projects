@@ -1,6 +1,6 @@
 cd
 
-!git clone https://github.com/jetsonai/pytorch-ssd
+git clone https://github.com/jetsonai/pytorch-ssd
 
 cd pytorch-ssd
 
