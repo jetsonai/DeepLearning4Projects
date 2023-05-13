@@ -1,10 +1,12 @@
 """
 An example that uses TensorRT's Python api to make inferences.
 """
-gst_str = ("v4l2src device=/dev/video1 ! \
-    video/x-raw, width=320, height=240, format=(string)YUY2,framerate=30/1 ! \
-    videoconvert ! video/x-raw,width=320,height=240,format=BGR ! \
-    appsink")
+# gst_str = ("v4l2src device=/dev/video1 ! \
+#     video/x-raw, width=320, height=240, format=(string)YUY2,framerate=30/1 ! \
+#     videoconvert ! video/x-raw,width=320,height=240,format=BGR ! \
+#     appsink")
+gst_str = ("data\crosswalk_cctv_01.mp4")
+# gst_str = ("data\crosswalk_cctv_02.mp4")
 
 import ctypes
 import os
@@ -418,8 +420,6 @@ if __name__ == "__main__":
 
     yolov5_wrapper = YoLov5TRT(engine_file_path)
     try:
-        
-            
         cap = cv2.VideoCapture(gst_str)
         
         for i in range(10):
