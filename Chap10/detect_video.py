@@ -180,6 +180,7 @@ class YoLov5TRT(object):
             result_boxes, result_scores, result_classid = self.post_process(
                 output[i * LEN_ALL_RESULT: (i + 1) * LEN_ALL_RESULT], batch_origin_h[i], batch_origin_w[i]
             )
+            thickness = round(0.002 * (batch_image_raw[i].shape[0] + batch_image_raw[i].shape[1]) / 2) + 1
             # Draw rectangles and labels on the original image
             for j in range(len(result_boxes)):
                 class_name = categories[int(result_classid[j])]
@@ -191,11 +192,12 @@ class YoLov5TRT(object):
                         label="{}:{:.2f}".format(
                             class_name, result_scores[j]
                         ),
-                        color=(0, 0, 255)
+                        color=(0, 0, 255),
+                        line_thickness=thickness
                     )
                     person_detected = True
             if person_detected:
-                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 0, 255), round(0.002 * (img.shape[0] + img.shape[1]) / 2) + 1)
+                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 0, 255), thickness)
         return batch_image_raw, end - start
 
     def destroy(self):
