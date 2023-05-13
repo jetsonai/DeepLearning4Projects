@@ -291,7 +291,7 @@ class YoLov5TRT(object):
         result_classid = boxes[:, 5] if len(boxes) else np.array([])
         return result_boxes, result_scores, result_classid
 
-    def bbox_iou(self, box1, box2, x1y1x2y2=True):
+    def bbox_iou(self, box1, box2):
         """
         description: compute the IoU of two bounding boxes
         param:
@@ -301,16 +301,10 @@ class YoLov5TRT(object):
         return:
             iou: computed iou
         """
-        if not x1y1x2y2:
-            # Transform from center and width to exact coordinates
-            b1_x1, b1_x2 = box1[:, 0] - box1[:, 2] / 2, box1[:, 0] + box1[:, 2] / 2
-            b1_y1, b1_y2 = box1[:, 1] - box1[:, 3] / 2, box1[:, 1] + box1[:, 3] / 2
-            b2_x1, b2_x2 = box2[:, 0] - box2[:, 2] / 2, box2[:, 0] + box2[:, 2] / 2
-            b2_y1, b2_y2 = box2[:, 1] - box2[:, 3] / 2, box2[:, 1] + box2[:, 3] / 2
-        else:
-            # Get the coordinates of bounding boxes
-            b1_x1, b1_y1, b1_x2, b1_y2 = box1[:, 0], box1[:, 1], box1[:, 2], box1[:, 3]
-            b2_x1, b2_y1, b2_x2, b2_y2 = box2[:, 0], box2[:, 1], box2[:, 2], box2[:, 3]
+        
+        # Get the coordinates of bounding boxes
+        b1_x1, b1_y1, b1_x2, b1_y2 = box1[:, 0], box1[:, 1], box1[:, 2], box1[:, 3]
+        b2_x1, b2_y1, b2_x2, b2_y2 = box2[:, 0], box2[:, 1], box2[:, 2], box2[:, 3]
 
         # Get the coordinates of the intersection rectangle
         inter_rect_x1 = np.maximum(b1_x1, b2_x1)
