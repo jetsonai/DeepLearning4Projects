@@ -172,6 +172,7 @@ class YoLov5TRT(object):
         self.ctx.pop()
         # Here we use the first row of output in that batch_size = 1
         output = host_outputs[0]
+        person_detected = False
         # Do postprocess
         for i in range(self.batch_size):
             result_boxes, result_scores, result_classid = self.post_process(
@@ -190,6 +191,9 @@ class YoLov5TRT(object):
                         ),
                         color=(0, 0, 255)
                     )
+                    person_detected = True
+            if person_detected:
+                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 0, 255), 10)
         return batch_image_raw, end - start
 
     def destroy(self):
