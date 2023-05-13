@@ -12,7 +12,6 @@ engine_file_path = "../../tensorrtx/yolov5/build/yolov5s_voc.engine"
 
 import ctypes
 import random
-import sys
 import threading
 import time
 import cv2
@@ -388,16 +387,7 @@ class warmUpThread(threading.Thread):
 
 
 if __name__ == "__main__":
-    # load custom plugin and engine
-
-    if len(sys.argv) > 1:
-        engine_file_path = sys.argv[1]
-    if len(sys.argv) > 2:
-        PLUGIN_LIBRARY = sys.argv[2]
-
     ctypes.CDLL(PLUGIN_LIBRARY)
-
-    # load coco labels
 
     categories = [ "aeroplane", "bicycle", "bird", 
                   "boat", "bottle", "bus", "car", "cat", 
