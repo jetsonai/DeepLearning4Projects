@@ -23,7 +23,7 @@ import pycuda.autoinit
 import pycuda.driver as cuda
 import tensorrt as trt
 
-CONF_THRESH = 0.5
+CONF_THRESH = 0.25
 IOU_THRESHOLD = 0.4
 LEN_ALL_RESULT = 38001
 LEN_ONE_RESULT = 38
