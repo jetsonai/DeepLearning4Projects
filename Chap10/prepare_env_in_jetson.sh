@@ -9,4 +9,4 @@ wget https://files.pythonhosted.org/packages/5e/3f/5658c38579b41866ba21ee1b5020b
 tar xvf pycuda-2019.1.2.tar.gz
 cd pycuda-2019.1.2
 python3 configure.py --cuda-root=/usr/local/cuda
-python3 setup.py install
+sudo python3 setup.py install
