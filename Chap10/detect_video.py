@@ -191,14 +191,8 @@ class YoLov5TRT(object):
         # Remove any context from the top of the context stack, deactivating it.
         self.ctx.pop()
         
-    def get_raw_image(self, image_path_batch):
-        """
-        description: Read an image from image path
-        """
-        for img_path in image_path_batch:
-            yield cv2.imread(img_path)
         
-    def get_raw_image_zeros(self, image_path_batch=None):
+    def get_raw_image_zeros(self):
         """
         description: Ready data for warmup
         """
