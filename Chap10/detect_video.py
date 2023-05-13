@@ -5,8 +5,8 @@ An example that uses TensorRT's Python api to make inferences.
 #     video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! \
 #     videoconvert ! video/x-raw,width=640,height=480,format=BGR ! \
 #     appsink")
-gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_01.mp4"
-# gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_02.mp4"
+# gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_01.mp4"
+gst_str = "../../DeepLearning4Projects/Chap10/data/crosswalk_cctv_02.mp4"
 PLUGIN_LIBRARY = "../../tensorrtx/yolov5/build/libmyplugins.so"
 engine_file_path = "../../tensorrtx/yolov5/build/yolov5s_voc.engine"
 
@@ -28,18 +28,6 @@ IOU_THRESHOLD = 0.4
 LEN_ALL_RESULT = 38001
 LEN_ONE_RESULT = 38
 
-def get_img_path_batches(batch_size, img_dir):
-    ret = []
-    batch = []
-    for root, dirs, files in os.walk(img_dir):
-        for name in files:
-            if len(batch) == batch_size:
-                ret.append(batch)
-                batch = []
-            batch.append(os.path.join(root, name))
-    if len(batch) > 0:
-        ret.append(batch)
-    return ret
 
 def plot_one_box(x, img, color=None, label=None, line_thickness=None):
     """
