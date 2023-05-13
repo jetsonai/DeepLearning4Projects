@@ -11,15 +11,12 @@ PLUGIN_LIBRARY = "../../tensorrtx/yolov5/build/libmyplugins.so"
 engine_file_path = "../../tensorrtx/yolov5/build/yolov5s_voc.engine"
 
 import ctypes
-import os
-import shutil
 import random
 import sys
 import threading
 import time
 import cv2
 import numpy as np
-import pycuda.autoinit
 import pycuda.driver as cuda
 import tensorrt as trt
 
