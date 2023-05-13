@@ -197,7 +197,9 @@ class YoLov5TRT(object):
                     )
                     person_detected = True
             if person_detected:
-                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 0, 255), thickness)
+                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 0, 255), thickness * 20)
+            else:
+                cv2.rectangle(batch_image_raw[i], (0,0), (batch_image_raw[i].shape[1], batch_image_raw[i].shape[0]), (0, 255, 0), thickness * 20)
         return batch_image_raw, end - start
 
     def destroy(self):
