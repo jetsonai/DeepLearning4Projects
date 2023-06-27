@@ -10,7 +10,7 @@ def imageProcessing(input):
     output = cv2.cvtColor(input, cv2.COLOR_BGR2GRAY)
     return output
 
-def Video(openpath, savepath = None):
+def videoProcess(openpath, savepath = None):
     cap = cv2.VideoCapture(openpath)
     if cap.isOpened():
         print("Video Opened")
@@ -46,4 +46,4 @@ def Video(openpath, savepath = None):
     return
    
 if __name__=="__main__":
-    Video(gst_str)
+    videoProcess(gst_str)
