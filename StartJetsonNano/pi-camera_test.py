@@ -5,12 +5,8 @@ gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)224, height=
 
 import cv2
 import numpy as np
-def imageProcessing(input):
-    output = np.copy(input)
-    output = cv2.cvtColor(input, cv2.COLOR_BGR2GRAY)
-    return output
 
-def Video(openpath, savepath = None):
+def videoProcessing(openpath):
     cap = cv2.VideoCapture(openpath)
     if cap.isOpened():
         print("Video Opened")
@@ -21,7 +17,6 @@ def Video(openpath, savepath = None):
     fps = cap.get(cv2.CAP_PROP_FPS)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    out = None
 
     cv2.namedWindow("Output", cv2.WINDOW_GUI_EXPANDED)
 
@@ -29,11 +24,10 @@ def Video(openpath, savepath = None):
         # Capture frame-by-frame
         ret, frame = cap.read()
         if ret:
-            # Our operations on the frame come here
-            #output = imageProcessing(frame)
 
             # Display the resulting frame
-            cv2.imshow("frame", frame)
+            #cv2.imshow("Input", frame)
+            cv2.imshow("Output", frame)
         else:
             break
         # waitKey(int(1000.0/fps)) for matching fps of video
@@ -41,9 +35,8 @@ def Video(openpath, savepath = None):
             break
     # When everything done, release the capture
     cap.release()
-
     cv2.destroyAllWindows()
     return
    
 if __name__=="__main__":
-    Video(gst_str)
+    videoProcessing(gst_str)
