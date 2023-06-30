@@ -8,7 +8,8 @@ from Model_Class_From_the_Scratch import MODEL_From_Scratch
 from Model_Class_Transfer_Learning_MobileNet import MobileNet
 import argparse
 
-gst_str = ("v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! videoconvert ! video/x-raw,width=640,height=480,format=BGR ! appsink")
+# gst_str = ("v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! videoconvert ! video/x-raw,width=640,height=480,format=BGR ! appsink")
+gst_str = (r"D:\jetsonai_test\DeepLearning4Projects\backup\Chap5\test_video.mp4")
 
 import cv2
 
