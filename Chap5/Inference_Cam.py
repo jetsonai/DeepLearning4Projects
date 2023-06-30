@@ -110,8 +110,6 @@ if __name__ == "__main__":
     source = args.source
     if args.is_scratch:
         is_train_from_scratch = True
-    if source.isdigit():
-        source = int(source)
     inferenceClass = Inference_Class()
     inferenceClass.load_model(is_train_from_scratch)
     inferenceClass.inference_video(source)
