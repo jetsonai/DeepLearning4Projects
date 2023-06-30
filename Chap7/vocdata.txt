@@ -1,2 +1,0 @@
-classes = 20
-names = vocnames.txt
