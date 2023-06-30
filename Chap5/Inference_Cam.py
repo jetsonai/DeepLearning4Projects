@@ -7,11 +7,8 @@ import numpy as np
 from Model_Class_From_the_Scratch import MODEL_From_Scratch
 from Model_Class_Transfer_Learning_MobileNet import MobileNet
 import argparse
-
-# gst_str = ("v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, format=(string)YUY2,framerate=30/1 ! videoconvert ! video/x-raw,width=640,height=480,format=BGR ! appsink")
-gst_str = (r"D:\jetsonai_test\DeepLearning4Projects\backup\Chap5\test_video.mp4")
-
 import cv2
+
 
 class Inference_Class():
     def __init__(self):
@@ -23,6 +20,7 @@ class Inference_Class():
                 transforms.Resize(size=(224, 224)),
                 transforms.ToTensor()
                 ])
+
 
     def load_model(self, is_train_from_scratch, label_map_file = "label_map.txt"):
         self.label_map = np.loadtxt(label_map_file, str, delimiter='\t')
@@ -37,23 +35,22 @@ class Inference_Class():
         model_str += ".pt"
         self.model.load_state_dict(torch.load(model_str, map_location=self.DEVICE))
         self.model.eval()
-
+        
+        
     def inference_video(self, video_source="test_video.mp4"):
-        cap = cv2.VideoCapture(gst_str)
+        cap = cv2.VideoCapture(video_source)
         if cap.isOpened():
             print("Video Opened")
         else:
             print("Video Not Opened")
             print("Program Abort")
             exit()
-        #cv2.namedWindow("Input", cv2.WINDOW_GUI_EXPANDED)
         cv2.namedWindow("Output", cv2.WINDOW_GUI_EXPANDED)
         with torch.no_grad():
             while cap.isOpened():
                 ret, frame = cap.read()
                 if ret:
                     output = self.inference_frame(frame)
-                    #cv2.imshow("Input", frame)
                     cv2.imshow("Output", output)
                 else:
                     break
@@ -62,6 +59,7 @@ class Inference_Class():
             cap.release()
             cv2.destroyAllWindows()
         return
+    
 
     def inference_frame(self, opencv_frame):
         opencv_rgb = cv2.cvtColor(opencv_frame, cv2.COLOR_BGR2RGB)
@@ -69,9 +67,7 @@ class Inference_Class():
         image_tensor = self.transform_info(image)
         image_tensor = image_tensor.unsqueeze(0)
         image_tensor = image_tensor.to(self.DEVICE)
-
         inference_result = self.model(image_tensor)
-
         inference_result = inference_result.squeeze()
         inference_result = inference_result.cpu().numpy()
         result_frame = np.copy(opencv_frame)
@@ -79,6 +75,7 @@ class Inference_Class():
         label_text += " " + str(inference_result[np.argmax(inference_result)])
         result_frame = cv2.putText(result_frame, label_text, (10, 50), cv2.FONT_HERSHEY_PLAIN, fontScale=2.0, color=(0,0,255), thickness=3)
         return result_frame
+    
     
     def inference_image(self, opencv_image):
         opencv_rgb = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
@@ -88,7 +85,6 @@ class Inference_Class():
         image_tensor = image_tensor.to(self.DEVICE)
         with torch.no_grad():
             inference_result = self.model(image_tensor)
-
         inference_result = inference_result.squeeze()
         inference_result = inference_result.cpu().numpy()
         result_frame = np.copy(opencv_image)
@@ -96,7 +92,6 @@ class Inference_Class():
         class_prob = str(inference_result[np.argmax(inference_result)])
         result_frame = cv2.putText(result_frame, label_text + " " + class_prob, (10, 50), cv2.FONT_HERSHEY_PLAIN, fontScale=2.0, color=(0,0,255), thickness=3)
         return result_frame, label_text, class_prob
-    
 
 
 if __name__ == "__main__":
@@ -110,16 +105,13 @@ if __name__ == "__main__":
             type=str, 
             default="./test_video.mp4", 
             help="OpenCV Video source")
-
     args = parser.parse_args()
     is_train_from_scratch = False
     source = args.source
-
     if args.is_scratch:
         is_train_from_scratch = True
     if source.isdigit():
         source = int(source)
-
     inferenceClass = Inference_Class()
     inferenceClass.load_model(is_train_from_scratch)
     inferenceClass.inference_video(source)
