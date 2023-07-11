@@ -1,5 +1,5 @@
 
-# pytorch-ssd 윈도우 실습
+# pytorch-ssd Jetson Nano 실습
 ## pytorch-ssd 저장소 복사
 ```
 git clone https://github.com/jetsonai/pytorch-ssd
@@ -15,4 +15,8 @@ python run_ssd_example.py mb1-ssd ./models/ssd_example/ssd_cctv_sample.pth ./mod
 ## 영상 파일 추론
 ```
 python inference_ssd_windows.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/run3.mp4
+```
+## cctv 추론
+```
+python inference_ssd_windows.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/detect_cctv.mp4
 ```
