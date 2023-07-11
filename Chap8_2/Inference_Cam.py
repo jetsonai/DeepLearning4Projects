@@ -37,8 +37,8 @@ class Inference_Class():
         self.model.load_state_dict(torch.load(model_str, map_location=self.DEVICE))
         self.model.eval()
 
-    def inference_video(self, video_source="test_video.mp4"):
-        cap = cv2.VideoCapture(gst_str)
+    def inference_video(self, src_str="test_video.mp4"):
+        cap = cv2.VideoCapture(src_str)
         if cap.isOpened():
             print("Video Opened")
         else:
@@ -116,9 +116,12 @@ if __name__ == "__main__":
 
     if args.is_scratch:
         is_train_from_scratch = True
+        
     if source.isdigit():
-        source = int(source)
+        src_str = gst_str
+    else:
+        src_str = source
 
     inferenceClass = Inference_Class()
     inferenceClass.load_model(is_train_from_scratch)
-    inferenceClass.inference_video(source)
+    inferenceClass.inference_video(src_str)
