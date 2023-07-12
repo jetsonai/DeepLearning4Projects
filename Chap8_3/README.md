@@ -14,9 +14,21 @@ python3 run_ssd_example.py mb1-ssd ./models/ssd_example/ssd_cctv_sample.pth ./mo
 ```
 ## 영상 파일 추론
 ```
-python3 inference_ssd_windows.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/run3.mp4
+python3 inference_ssd_nano.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/run3.mp4
 ```
-## cctv 추론
+## cctv file 추론
 ```
-python3 inference_ssd_windows.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/detect_cctv.mp4
+python3 inference_ssd_nano.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/detect_cctv.mp4
 ```
+## cctv camera 추론
+```
+python3 inference_ssd_nano.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt
+```
+
+## cctv file 추론 & log
+```
+python3 inference_ssd_nano_log.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/detect_cctv.mp4
+```
+## cctv camera 추론 & log
+```
+python3 inference_ssd_nano_log.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt 
