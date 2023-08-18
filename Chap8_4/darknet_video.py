@@ -162,9 +162,9 @@ def drawing(frame_queue, detections_queue, fps_queue):
 
 if __name__ == '__main__':
     frame_queue = Queue()
-    darknet_image_queue = Queue(maxsize=1)
-    detections_queue = Queue(maxsize=1)
-    fps_queue = Queue(maxsize=1)
+    darknet_image_queue = Queue(maxsize=5)
+    detections_queue = Queue(maxsize=5)
+    fps_queue = Queue(maxsize=5)
 
     args = parser()
     check_arguments_errors(args)
