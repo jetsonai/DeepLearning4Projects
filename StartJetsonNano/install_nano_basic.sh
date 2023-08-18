@@ -12,6 +12,7 @@ sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 pip3 install tqdm
 
 pip3 install packaging
+python3 -m pip install --upgrade pip
 
 echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> ~/.bashrc
 echo "export PATH=\$PATH:/usr/local/cuda/bin" >> ~/.bashrc
