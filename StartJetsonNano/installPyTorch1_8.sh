@@ -5,7 +5,7 @@ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
 
 python3 -m pip install Cython 
 python3 -m pip install wheel
-python3 -m pip install numpy==1.13.3
+python3 -m pip install numpy
 python3 -m pip install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 rm torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 
