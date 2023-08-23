@@ -5,7 +5,7 @@ mv vocdata.txt darknet/
 mv yolov4-tiny_voc.cfg darknet/
 mv yolov4-tiny_voc_last.weights darknet/
 mv darknet_video.py darknet/
-mv blackbox.avi darknet/
+mv blackbox_video.avi darknet/
 cp Makefile_Nano darknet/Makefile
 cd darknet && make -j $(nproc)
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights
