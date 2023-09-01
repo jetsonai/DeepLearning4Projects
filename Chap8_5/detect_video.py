@@ -16,6 +16,7 @@ import threading
 import time
 import cv2
 import numpy as np
+import pycuda.autoinit
 import pycuda.driver as cuda
 import tensorrt as trt
 
@@ -140,6 +141,7 @@ class YoLov5TRT(object):
             batch_origin_h.append(origin_h)
             batch_origin_w.append(origin_w)
             np.copyto(batch_input_image[i], input_image)
+            break
         batch_input_image = np.ascontiguousarray(batch_input_image)
 
         # Copy input image to host buffer
@@ -371,8 +373,8 @@ class warmUpThread(threading.Thread):
         """
         description: Ready data for warmup
         """
-        for _ in range(self.batch_size):
-            yield np.zeros([self.input_h, self.input_w, 3], dtype=np.uint8)
+        for _ in range(2):
+            yield np.zeros([self.yolov5_wrapper.input_h, self.yolov5_wrapper.input_w, 3], dtype=np.uint8)
 
     def run(self):
         batch_image_raw, use_time = self.yolov5_wrapper.infer(self.get_raw_image_zeros())
