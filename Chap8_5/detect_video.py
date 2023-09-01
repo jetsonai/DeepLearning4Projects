@@ -7,8 +7,8 @@ An example that uses TensorRT's Python api to make inferences.
 #     appsink")
 # gst_str = "../../DeepLearning4Projects/Chap8_5/data/crosswalk_cctv_01.mp4"
 gst_str = "../../DeepLearning4Projects/Chap8_5/data/crosswalk_cctv_02.mp4"
-PLUGIN_LIBRARY = "../../tensorrtx/yolov5/build/libmyplugins.so"
-engine_file_path = "../../tensorrtx/yolov5/build/yolov5s_voc.engine"
+PLUGIN_LIBRARY = "build/libmyplugins.so"
+engine_file_path = "build/yolov5s_voc.engine"
 
 import ctypes
 import random
