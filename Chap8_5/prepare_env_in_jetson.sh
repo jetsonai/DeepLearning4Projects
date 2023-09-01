@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt install libblas-dev liblapack-dev libatlas-base-deb gfortran
+python3 -m pip install --upgrade pip
 python3 -m pip install cython==0.29.15
 python3 -m pip install numpy==1.18.5
 python3 -m pip install scipy==1.4.1
@@ -10,7 +11,6 @@ cp detect_video.py ~/detect_video.py
 cd ~
 git clone -b v7.0 https://github.com/jetsonai/yolov5
 git clone -b yolov5-v7.0 https://github.com/jetsonai/tensorrtx
-python3 -m pip install --upgrade pip
 python3 -m pip install tqdm thop ipython psutil 
 cp ~/tensorrtx/yolov5/gen_wts.py ~/yolov5/.
 cp ~/yolov5s_voc.pt ~/yolov5/.
