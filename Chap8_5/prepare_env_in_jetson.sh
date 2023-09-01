@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install libblas-dev liblapack-dev libatlas-base-deb gfortran
+sudo apt install libblas-dev liblapack-dev libatlas-base-dev gfortran
 python3 -m pip install --upgrade pip
 python3 -m pip install cython==0.29.15
 python3 -m pip install numpy==1.18.5
