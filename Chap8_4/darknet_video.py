@@ -180,6 +180,6 @@ if __name__ == '__main__':
     cap = cv2.VideoCapture(input_path)
     video_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     video_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    Thread(target=video_capture, args=(frame_queue, darknet_image_queue)).start()
-    Thread(target=inference, args=(darknet_image_queue, detections_queue, fps_queue)).start()
+    Thread(target=video_capture, daemon=True, args=(frame_queue, darknet_image_queue)).start()
+    Thread(target=inference, daemon=True, args=(darknet_image_queue, detections_queue, fps_queue)).start()
     Thread(target=drawing, args=(frame_queue, detections_queue, fps_queue)).start()
