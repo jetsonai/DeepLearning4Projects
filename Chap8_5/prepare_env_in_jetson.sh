@@ -1,11 +1,11 @@
 #!/bin/bash
 sudo apt install libblas-dev liblapack-dev libatlas-base-dev gfortran
 python3 -m pip install --upgrade pip
-python3 -m pip install cython==0.29.15
-python3 -m pip install numpy==1.18.5
-python3 -m pip install scipy==1.4.1
-python3 -m pip install seaborn==0.11.0
-python3 -m pip install pandas==1.1.4
+sudo python3 -m pip install cython==0.29.15
+sudo python3 -m pip install numpy==1.18.5
+sudo python3 -m pip install scipy==1.4.1
+sudo python3 -m pip install seaborn==0.11.0
+sudo python3 -m pip install pandas==1.1.4
 cp weights/yolov5s_voc.pt ~/yolov5s_voc.pt
 cp detect_video.py ~/detect_video.py
 cd ~
