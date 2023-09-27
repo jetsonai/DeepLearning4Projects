@@ -63,7 +63,7 @@ def set_saved_video(input_video, output_video, size):
 
 def convert2relative(bbox):
     """
-    YOLO format use relative coordinates for annotation
+    YOLO에서는 상대좌표를 사용합니다.
     """
     x, y, w, h  = bbox
     _height     = darknet_height
