@@ -4,3 +4,10 @@
 
 https://drive.google.com/file/d/165H8z2D4IuiojZOUQzKLM07nSVEBKqZV/view?usp=sharing
 
+
+
+
+
+sudo sh -c 'echo 150 > /sys/devices/pwm-fan/target_pwm'
+
+
