@@ -1,3 +1,3 @@
-# Download Jetpack image Link
+# 재활용품 분류 추론
 
-8장의 젯슨나노 실습을 위한 설치가 완성된 이미지 다운로드 링크
+python3 Inference_Cam.py
