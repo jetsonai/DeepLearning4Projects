@@ -4,11 +4,11 @@
   20. [Free Space Detection with Deep Nets for Autonomous Driving](http://cs231n.stanford.edu/reports/2015/pdfs/jpazhaya_final.pdf).
   
 ## 20 page
-  21. FCN: 완전한 콘볼루션 네트워크[논문 참조: ⟨Fully Convolutional Networks for Semantic Segmentation, Jonathan Long, 2015⟩](https://arxiv.org/pdf/1411.4038.pdf)
+  21. FCN: 완전한 콘볼루션 네트워크 [논문 참조: ⟨Fully Convolutional Networks for Semantic Segmentation, Jonathan Long, 2015⟩](https://arxiv.org/pdf/1411.4038.pdf)
 
-  22. 그림참조 [의학 영상에서 장기의 병변을 구별 및 분리하는 이미지 분할](https://blogs.nvidia.co.kr/2021/12/17/nvidia-data-scientists-take-top-spots-in-miccai-2021-brain-tumor-segmentation-challenge/)
+  22. 의학 영상에서 장기의 병변을 구별 및 분리하는 이미지 분할 [그림참조](https://blogs.nvidia.co.kr/2021/12/17/nvidia-data-scientists-take-top-spots-in-miccai-2021-brain-tumor-segmentation-challenge/)
 
-  23. 그림참조 [인공지능, 머신러닝, 딥러닝의 역사](https://developer.nvidia.com/deep-learning)
+  23. 인공지능, 머신러닝, 딥러닝의 역사 [그림참조](https://developer.nvidia.com/deep-learning)
 
 
 ## 4 page
