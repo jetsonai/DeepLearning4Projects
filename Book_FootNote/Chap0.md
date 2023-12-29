@@ -16,7 +16,7 @@
   8. 인공지능 생성형 모델은 기존에 있는 데이터를 학습하고 이를 기반으로 새로운 데이터를 생성합니다. GPT모델이 대표적인 생성형 모델이며 최근에는 이미지 생성 분야에도 활용됩니다.
 
 
-## 4 page
+## 5 page
   9. [인공지능으로 실종자 찾는다](https://www.denews.co.kr/news/articleView.html?idxno=24908)
   10. [AI 카메라가 촬영하는 무인 스포츠 중계 콘텐츠](https://stonebc.com/archives/15216)
   11. [아마존 고](https://youtu.be/NrmMk1Myrxc)
@@ -27,7 +27,8 @@
   16. [AI 로봇, 노인들의 반려 친구로 주목](http://www.emozak.co.kr/news/articleView.html?idxno=5088)
   17. [영국의 휴머노이드 아메카에 GPT모델 적용](https://www.youtube.com/watch?v=8kwWLDUwEPY)
 
-
+## 6 page
+  18. [구글 드라이브](https://drive.google.com/drive/my-drive)
 
 
 
