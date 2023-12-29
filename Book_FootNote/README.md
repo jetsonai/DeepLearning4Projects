@@ -6,4 +6,6 @@
 ## 1장
 [1장 딥러닝 영상분석 소개](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap1.md)
 
+## 2장
+[2장 딥러닝 영상분석의 시작, CNN](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap2.md)
 
