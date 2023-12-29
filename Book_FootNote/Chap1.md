@@ -1,4 +1,4 @@
-# 1 각주 모음
+# 1장 각주 모음
 ## 19 page
   19. [바운딩 박스](https://wiki.openstreetmap.org/wiki/Bounding_Box)
   20. [Free Space Detection with Deep Nets for Autonomous Driving](http://cs231n.stanford.edu/reports/2015/pdfs/jpazhaya_final.pdf).
