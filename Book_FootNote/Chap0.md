@@ -5,6 +5,7 @@
 
 ## 3 page
   3.〈What does AI have to do with Collision Avoidance Systems?〉, [모빌아이](https://www.mobileye.com/us/fleets/blog/collision-avoidance-and-ai/)
+
   4. ⟨SVNet⟩, [스트라드비젼](https://stradvision.com/sv/technology)
 
   5. [인공지능(AI) 기반 의료기기 현황 및 이슈〉, 2019, 한국보건산업진흥원](https://bit.ly/3sBaFUx)
