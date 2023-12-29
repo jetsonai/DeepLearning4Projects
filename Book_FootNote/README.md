@@ -2,10 +2,10 @@
 # 각주 모음
 ## 1장
 ```
-https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap0.md
+[프롤로그](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap0.md)
 ```
 ## 2장
 ```
-https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap0.md
+[프롤로그](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap0.md)
 ```
 
