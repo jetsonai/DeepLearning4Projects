@@ -45,6 +45,7 @@ visual-perception/)
 ## 57 page
   23. 오버피팅의 예 [그림 참조](https://en.wikipedia.org/wiki/Overfitting)
   24. 평가 데이터: 밸리데이션(Validation) 데이터라고도 합니다.
+
 ## 58 page
   25. 딥러닝에서 평가 데이터의 역할 그림 참조 : 이러한 그래프는 [Digits](https://developer.nvidia.com/digits)라는 딥러닝 서버용 소프트웨어 프레임워크에서 얻을 수 있습니다.
 
@@ -56,6 +57,29 @@ visual-perception/)
   30. [드롭아웃(dropout)](https://en.wikipedia.org/wiki/Convolutional_neural_network#Dropout)
   31. (데이터 증강(Data Augmentation)](https://www.tensorflow.org/tutorials/images/data_augmentation)
 
+## 60 page
+  32. 하이퍼볼릭 탄젠트 함수: Hyperbolic Tangent, 혹은 Tanh라 불리는 이 함수는 실수 값을 (-1, 1) 범위로 압축하는 활성화 함수입니다 [참조](https://wikidocs.net/152159)
+  33. 활성화 함수 : ≪밑바닥부터 시작하는 딥러닝≫(한빛미디어, 2017), 268쪽
+  34. 비선형성이 없는 네트워크 [뉴런(비선형 변환이 없는 경우) 그림 참조](https://jjeongil.tistory.com/976)
+  35. 이 책에서 곱셈 부호를 ×로 사용하지만 이번 수식에서 ×는 입력값을 뜻하기 때문에 그림 2.12와 설명에 한하여 곱셈을 * 기호로 나타내었습니다.
+
+## 61 page
+  36. 비선형성과 다수의 은닉층으로 복잡한 데이터의 분류가 가능 [그림 참조](≪패턴인식≫(아이티씨, 2006), 268쪽)
+
+## 62 page
+  37. [시그모이드 함수](https://en.wikipedia.org/wiki/Sigmoid_function)
+  38. 그래디언트: 여기서 그래디언트는 ‘경사 하강법과 역전파’에서 언급한 가중치의 변화량입니다
+
+## 63 page
+  39. ReLU 활성화 함수: 〈ImageNet Classification with Deep Convolutional Neural Networks〉, Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton, 2012
+
+## 64 page
+  40. 포화되지 않는 활성화 함수들 [cs231n Lecture 6 | Training Neural Networks](https://youtu.be/wEoyxE0GP2M)
+  41. Leaky ReLU: [≪Empirical Evaluation of Rectified Activations in Convolutional Network≫](https://arxiv.org/abs/1505.00853), Bing Xu, Naiyan Wang, Tianqi Chen, Mu Li, 2015, 
+
+## 65 page
+  42. ELU 함수 [그림 참조](https://medium.com/@danqing/a-practical-guide-to-relu-b83ca804f1f7)
+  43. ELU: ≪핸즈온 머신러닝≫(한빛미디어, 2018), 359쪽.
 
 
 
