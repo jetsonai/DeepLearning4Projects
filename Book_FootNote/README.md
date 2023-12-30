@@ -12,3 +12,6 @@
 ## 3장
 [3장 딥러닝 영상분석을 위한 학습 과정](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap3.md)
 
+## 4장
+[4장 이미지 분할과 객체 인식](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap4.md)
+
