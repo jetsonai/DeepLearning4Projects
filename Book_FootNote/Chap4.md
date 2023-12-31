@@ -76,27 +76,43 @@
 ## 148 page
   35. YOLO의 Pascal VOC 2007 실시간 추론 성능: 〈You Only Look Once: Unified, Real-Time Object Detection〉, Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi, 2016, https://pjreddie.com/media/files/papers/yolo.pdf, 논문의 표 1 참조
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 149 page
+  36. YOLOv2 논문: [〈YOLO9000: Better, Faster, Stronger〉](Joseph Redmon, Ali Farhadi, 2016, https://arxiv.org/pdf/1612.08242.pdf)
+  37. SSD(Single Shot MultiBox Detector): 4.4절 참조
+  38. YOLOv2의 Pascal VOC 2007 실시간 추론 성능: 〈YOLO9000: Better, Faster, Stronger〉, Joseph Redmon, Ali Farhadi, 2016,, 논문의 표 3 참조
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 151 page
+  39. 수용 영역(receptive field): 수용 영역(receptive field)은 출력 레이어의 뉴런 하나에 영향을 미치는 입력 뉴런들의 공간 크기를 말합니다.
+      
+## 153 page
+  40. YOLOv2는 좋은 IoU 점수로 이어지는 k-평균 클러스터링을 사용 :〈YOLO9000: Better, Faster, Stronger〉, Joseph Redmon, Ali Farhadi, 2016, 논문의 그림 2 참고
+  41. 직접 측위 예측(Direct Location Prediction) :〈YOLO9000: Better, Faster, Stronger〉, Joseph Redmon, Ali Farhadi, 2016, 논문의 그림 3 참고
+  42. Darknet-19 :〈YOLO9000: Better, Faster, Stronger〉, Joseph Redmon, Ali Farhadi, 2016, 논문의 표 6 참고
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 155 page
+  44. 최종 성능 테이블: 〈YOLO9000: Better, Faster, Stronger〉, Joseph Redmon, Ali Farhadi, 2016, 논문의 표 2 참고
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 156 page
+  45. YOLOv3 논문 : [〈YOLOv3: An Incremental Improvement〉](https://arxiv.org/pdf/1804.02767.pdf), Redmon, Ali Farhadi, 2018,  논문의 그림 1
+  46. 바운딩 박스: 크기와 위치 정보가 있는 앵커 박스의 의미.
+      
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
-## 140 page
-  27. Faster R-CNN 테스트 시간: http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
-
+## 154 page
+  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
 
 
 
