@@ -98,6 +98,8 @@
 ## 156 page
   45. YOLOv3 논문 : [〈YOLOv3: An Incremental Improvement〉](https://arxiv.org/pdf/1804.02767.pdf), Redmon, Ali Farhadi, 2018,  논문의 그림 1
   46. 바운딩 박스: 크기와 위치 정보가 있는 앵커 박스의 의미.
+  47. 그림 4.22 바운딩 박스의 위치 정보 참조
+  48. 로지스틱 회귀: [independent logistic regression](https://en.wikipedia.org/wiki/Logistic_regression)
       
 ## 154 page
   43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
