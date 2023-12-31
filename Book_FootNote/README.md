@@ -1,7 +1,10 @@
 # 실전 프로젝트로 배우는 딥러닝 컴퓨터 비전
 # 각주 모음
+
 ## 프롤로그
 [프롤로그](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap0.md)
+
+# 1부 딥러닝 영상분석을 배워보자
 
 ## 1장
 [1장 딥러닝 영상분석 소개](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap1.md)
@@ -15,3 +18,6 @@
 ## 4장
 [4장 이미지 분할과 객체 인식](https://github.com/jetsonai/DeepLearning4Projects/blob/main/Book_FootNote/Chap4.md)
 
+# 2부
+
+# 3부
