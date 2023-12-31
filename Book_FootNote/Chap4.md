@@ -101,22 +101,74 @@
   47. 그림 4.22 바운딩 박스의 위치 정보 참조
   48. 로지스틱 회귀: [independent logistic regression](https://en.wikipedia.org/wiki/Logistic_regression)
       
-## 154 page
-  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
+## 157 page
+  49. 선형 회귀와 로지스틱 회귀: [참조](https://www.javatpoint.com/linear-regression-vs-logistic-regression-in-machine-learning)
+  50. FPN: [참조](https://arxiv.org/pdf/1612.03144.pdf) ⟨Feature Pyramid Networks for Object Detection⟩, Tsung-Yi Lin, Piotr Dollár, 2016
 
-## 154 page
-  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
+## 158 page
+  51. 파인 그레인드(fine-grained): 파인 그레인드(fine-grained) 정보란 의미적으로 세분화된 정보라고 이해하면 됩니다. [참조](https://educalingo.com/ko/dic-en/fine-grained)
+  52. k-평균(k-means): [참조](https://en.wikipedia.org/wiki/K-means_clustering)
 
-## 154 page
-  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
+## 159 page
+  53. Darknet-53: [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 1 참조
 
-## 154 page
-  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
+## 160 page
+  54. YOLOv3의 결과: 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 2, 표 3 참조
+  55. DSSD(Deconvolutional Single Shot Detector), Cheng-Yang Fu, 2017, https://arxiv.org/pdf/1701.06659.pdf
 
-## 154 page
-  43. 패스스루 레이어(pass-through layer): [참조](https://www.programmersought.com/article/831212120/)
+## 162 page
+  56. SSD(Single Shot MultiBox Detector): [참조](https://arxiv.org/pdf/1512.02325.pdf), 2016, Wei Liu, Dragomir Anguelov, Dumitru Erhan
+  57. 디폴트 박스 : 앵커 박스와 같은 개념입니다.
+      
+## 163 page
+  58. SSD 모델의 구조: [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 그림 2 참조
+
+## 166 page
+  59. FCN: 4.1절 참고.
+  60. 그림 4.27은 프레임워크에서 사용되는 두 가지 특징 맵(8×8 및 4×4)을 보여줍니다.
+  61. 표 4.10 SSD의 성능(Pascal VOC2007):〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 7 참조
+
+## 168 page
+  62. Mask R-CNN: 이미지 객체 분할: [참조](https://arxiv.org/pdf/1703.06870.pdf) Kaiming He Georgia Gkioxari,  그림 1 참조
+  63. RoIAlign: [참조](https://developer.nvidia.com/blog/training-instance-segmentation-models-using-maskrcnn-on-tao-toolkit/)
+
+## 169 page
+  64. Mask R-CNN 적용 영상: [참조](https://arxiv.org/pdf/1704.04861.pdf) 〈MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications〉, Andrew G. Howard, Menglong, 
+
+## 170 page
+  65. 뎁스와이즈 분리 콘볼루션(Depthwise Separable Convolution): [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 1 참조
+  66. 역잔차 & 선형 보틀넥(Inverted Residuals & Linear Bottlenecks): [참조](https://arxiv.org/pdf/1801.04381.pdf) 〈MobileNet V2: Inverted Residuals and Linear Bottlenecks〉, Mark Sandler, Andrew Howard,
+
+## 171 page
+  67. 역 잔차: [참조](https://en.wikipedia.org/wiki/Nvidia_Titan) 
+
+## 172 page
+  68. Nvidia Titan: [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 1 참조
+  69. YOLOv4 의 4가지 구성요소:  [참조](https://arxiv.org/pdf/2004.10934.pdf)〈YOLOv4: Optimal Speed and Accuracy of Object Detection〉, Alexey Bochkovskiy, Chien-Yao Wang, 2020, 그림 2 참조
+
+## 173 page
+  70. 백 오브 스페셜(Bag of Specials): 〈YOLOv4: Optimal Speed and Accuracy of Object Detection〉, Alexey Bochkovskiy, Chien-Yao Wang, 2020
+  71. 객체 폐색(Object Occlusion) 시뮬레이팅: 데이터 증강 시 프로그램을 통해 객체를 일부 가려지게 되는 데이터를 생성하는 것을 말합니다. 사물 인지 데이터는 객체가 잘 보이는 이미지를 사용하지만 실제 상황의 영상은 객체가 일부 가려져 있는 경우가 대부분이기 때문에 이 방법을 사용해 실제 상황 검출률을 높일 수 있습니다.
+
+## 174 page
+  72. IoU 기반 손실 함수: [IoU loss](https://wikidocs.net/163050)
+  73. [수용 영역](https://www.baeldung.com/cs/cnn-receptive-field-size)
+
+## 176 page
+  74. FPN과 BiFPN의 차이: [참조](https://arxiv.org/pdf/1911.09070.pdf) 〈EfficientDet: Scalable and Efficient Object Detection〉, MingxingTan, 2020,  그림 2 참조
+  75. Mish: [참조](https://arxiv.org/pdf/1908.08681.pdf) 〈Mish:A Self Regularized Non-Monotonic Activation Function〉, Diganta Misra, 2020
+
+## 178 page
+  76. CSPNet(Cross Stage Partial DenseNet): [참조](https://arxiv.org/pdf/1911.11929v1.pdf) 〈A New Backbone that can Enhance Learning Capability of CNN〉, CY Wang, 2019
+
+## 179 page
+  77. PAN(Path Augmented Network): [참조](https://arxiv.org/pdf/1803.01534.pdf) 〈Path Aggregation Network for Instance Segmentation〉, Shu Liu, 2018
+  78. low-level feature: 입력층에 가까운 계층의 특징, high-level feature: 출력에 가까운 계층의 특징
+  79. 그림 4.42 YOLOv4 네트워크의 구조: 〈Yolo v4 Object Detection - How it Works & Why it’s So Amazing〉, https://youtu.be/_JzOFWx1vZg
+
+## 181 page
+  80. [Pascal VOC 공식 홈페이지](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) 
 
 
 
 
-     
