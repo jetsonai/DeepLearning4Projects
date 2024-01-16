@@ -140,7 +140,7 @@
   66. 역잔차 & 선형 보틀넥(Inverted Residuals & Linear Bottlenecks): [참조](https://arxiv.org/pdf/1801.04381.pdf) 〈MobileNet V2: Inverted Residuals and Linear Bottlenecks〉, Mark Sandler, Andrew Howard,
 
 ## 171 page
-  67. 역 잔차: [참조](https://velog.io/@oooops/RoIPool%EA%B3%BC-RoIAlign-%EC%B0%A8%EC%9D%B4%EB%8A%94) 
+  67. 역 잔차:〈MobileNetV2: Inverted Residuals and Linear Bottlenecks〉, Mark Sandler, Andrew Howard, https://arxiv.org/pdf/1801.04381.pdf 그림 3 참조
 
 ## 172 page
   68. Nvidia Titan: [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 1 참조
