@@ -130,10 +130,10 @@
 
 ## 168 page
   62. Mask R-CNN: 이미지 객체 분할: [참조](https://arxiv.org/pdf/1703.06870.pdf) Kaiming He Georgia Gkioxari,  그림 1 참조
-  63. RoIAlign: [참조](https://developer.nvidia.com/blog/training-instance-segmentation-models-using-maskrcnn-on-tao-toolkit/)
+  63. RoIAlign: [참조](https://velog.io/@oooops/RoIPool%EA%B3%BC-RoIAlign-%EC%B0%A8%EC%9D%B4%EB%8A%94)
 
 ## 169 page
-  64. Mask R-CNN 적용 영상: [참조](https://arxiv.org/pdf/1704.04861.pdf) 〈MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications〉, Andrew G. Howard, Menglong, 
+  64. Mask R-CNN 적용 영상: [참조](https://developer.nvidia.com/blog/training-instance-segmentation-models-using-maskrcnn-on-tao-toolkit/) 
 
 ## 170 page
   65. 뎁스와이즈 분리 콘볼루션(Depthwise Separable Convolution): [참조](https://arxiv.org/pdf/1804.02767.pdf) 〈YOLOv3: An Incremental Improvement〉, Redmon, Ali Farhadi, 2018, 논문의 표 1 참조
