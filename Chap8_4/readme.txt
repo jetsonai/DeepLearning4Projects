@@ -1,4 +1,4 @@
-./build_darknet_on_jetson_nano.sh
+sh ./build_darknet_on_jetson_nano.sh
 
 cd darknet
 
