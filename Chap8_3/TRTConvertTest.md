@@ -21,8 +21,8 @@ ls ./onnx/ssd-mobilenet.onnx
 ```
 cp ~/AILearningJetbot/FollowingBot/detectnet_test.py ./
 
-# 최초 추론 테스트에서는 nonx 파일을 tensorrt 엔진 파일로 변환하는 데 ~510분 정도 소요
+# 최초 추론 테스트에서는 nonx 파일을 tensorrt 엔진 파일로 변환하는 데 ~5~10분 정도 소요
 
 ```
 python3 detectnet_test.py --model=onnx/ssd-mobilenet.onnx --labels=onnx/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes
-
+```
