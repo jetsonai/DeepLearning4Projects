@@ -1,7 +1,11 @@
 * 쿠다 빌드 환경설정이 안 되었다면 반드시 다음의 설정을 하시길 바랍니다.
 ```
 echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> ~/.bashrc
+```
+```
 echo "export PATH=\$PATH:/usr/local/cuda/bin" >> ~/.bashrc
+```
+```
 echo "export OPENBLAS_CORETYPE=ARMV8" >> ~/.bashrc
 ```
 
