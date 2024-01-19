@@ -29,3 +29,21 @@ python3 darknet_video.py \
 --thresh 0.25
 ```
 
+# 카메라 테스트
+
+소스 수정
+```
+    if input_path == 0:
+        gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)640, height=(int)480, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+        input_path = gst_str
+```
+
+테스트 실행
+```
+python3 darknet_video.py \
+--input 0 \
+--weights yolov4-tiny_voc_last.weights \
+--config_file yolov4-tiny_voc.cfg \
+--data_file vocdata.txt \
+--thresh 0.25
+```
