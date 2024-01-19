@@ -24,3 +24,10 @@ python3 inference_ssd_nano.py ./models/ssd_example/ssd_cctv_sample.pth ./models/
 ```
 python3 inference_ssd_nano.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt
 ```
+## cctv file 추론 & log
+```
+python3 inference_ssd_nano_log.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt ./data/detect_cctv.mp4
+```
+## cctv camera 추론 & log
+```
+python3 inference_ssd_nano_log.py ./models/ssd_example/ssd_cctv_sample.pth ./models/ssd_example/labels.txt 
