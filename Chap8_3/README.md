@@ -35,10 +35,11 @@ python3 inference_ssd_nano_log.py ./models/ssd_example/ssd_cctv_sample.pth ./mod
 
 ## 로그 수정 TODO
 
+```
             lv = f"{labels[i]}"
             if lv == '3':
                   # 타임로그, 라벨, 신뢰도를 로그에 남김.
                 Data = "[{}] classID: {} conf:{}\n".format(getTimeLog(), labels[i], probs[i])
                 print(Data)
                 f.write(Data)
-
+```
