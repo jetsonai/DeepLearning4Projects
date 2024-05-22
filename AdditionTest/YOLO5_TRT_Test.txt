@@ -1,0 +1,31 @@
+
+
+git clone https://github.com/jetsonai/DeepLearning4Projects
+cd DeepLearning4Projects/Chap8_5
+git clone -b v7.0 https://github.com/jetsonai/yolov5
+
+sh prepare_env_in_jetson.sh
+
+cd ~/tensorrtx/yolov5
+
+mkdir build && cd build && cp ~/Downloads/yolov5s_voc.wts .
+
+2. ~/tensorrtx/yolov5/src/config.h의
+⋯
+constexpr static int kNumClass = 20;
+⋯
+constexpr static int kInputH = 480;
+constexpr static int kInputW = 480;
+⋯
+
+cmake ..
+make
+
+
+./yolov5_det -s yolov5s_voc.wts yolov5s_voc.engine s
+
+./yolov5_det -d yolov5s_voc.engine ../images
+
+cd ..
+
+python3 detect_video.py
