@@ -8,6 +8,7 @@ sh prepare_env_in_jetson.sh
 
 Chap7 에 있는 Colab 예제를 수행하거나 다음 링크의 파일을 다운받으세요.
 
+https://drive.google.com/file/d/1bg_kXqKJSBTqaI1KY13UOKG8ZSLkqVym/view?usp=sharing
 
 cd ~/tensorrtx/yolov5
 
