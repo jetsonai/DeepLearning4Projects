@@ -4,8 +4,6 @@
 
 cp DeepLearning4Projects/AdditionTest/*.sh ~
 
-cp DeepLearning4Projects/AdditionTest/yolov5s_voc.wts ~/Downloads
-
 sh install_packages4dl.sh
 
 (한시간 반쯤 소요)
