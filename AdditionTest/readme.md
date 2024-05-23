@@ -42,6 +42,13 @@ sh install_pytorch_1.11_p38.sh
 
 (한시간 쯤 소요)
 
+종료된 후 터미널 창에서 torch 설치 확인해주십시오.
+
+python3 라고 입력 후
+import torch
+import torchvision 
+이라고 입력하여 에러가 없으면 Ctl-D 하고 나오면 됩니다.
+
 sh prepare_env_in_jetson_jp5.sh
 
 (30~40분 쯤 소요)
