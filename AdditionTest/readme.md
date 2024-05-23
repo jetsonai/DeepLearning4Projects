@@ -1,8 +1,8 @@
 # 8.5장의 예제를 나노보다 고 사양 젯슨 보드에서 테스트 가능한 스크립트입니다.
 
-# 본 페이지는 1 번 Jetpack 버전 4.6, 2번 Jetpack 버전 5.0.2 로 구성되어 있습니다.
+## 본 페이지는 1 번 Jetpack 버전 4.6, 2번 Jetpack 버전 5.0.2 로 구성되어 있습니다.
 
-# 1번 Jetpack 버전 4.6  
+## 1번 Jetpack 버전 4.6  
 
 Jetson TX2, Tetson AGX Xavier Jetpack 4.6 버전이 설치된 상태에서 테스트를 시작합니다.(4.6.x)
 
@@ -25,7 +25,7 @@ sh prepare_env_in_jetson.sh
 
 이후에는 YOLO5_TRT_Test.txt 를 보면서 따라해보세요.
 
-# 2번 Jetpack 버전 5.0.2
+## 2번 Jetpack 버전 5.0.2
 
 Tetson AGX Xavier Jetpack 5.0.2 버전이 설치된 상태에서 테스트를 시작합니다.
 
@@ -59,7 +59,7 @@ sh prepare_env_in_jetson_jp5.sh
 안되는 부분 있으면 말씀해주세요 !!
 
 
-# (참고) 딥러닝 사용하시는 시간에 한하여 다음 명령어로 fan 을 동작해주십시오
+## (참고) 딥러닝 사용하시는 시간에 한하여 다음 명령어로 fan 을 동작해주십시오
 
 sudo jetson_clocks --fan
 
