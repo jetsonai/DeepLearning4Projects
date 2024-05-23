@@ -1,5 +1,5 @@
 
-
+1. 폴더와 파일 들 준비
 git clone https://github.com/jetsonai/DeepLearning4Projects
 cd DeepLearning4Projects/Chap8_5
 git clone -b v7.0 https://github.com/jetsonai/yolov5
@@ -12,7 +12,7 @@ cd ~/tensorrtx/yolov5
 
 mkdir build && cd build && cp ~/Downloads/yolov5s_voc.wts .
 
-2. ~/tensorrtx/yolov5/src/config.h의
+2. ~/tensorrtx/yolov5/src/config.h 수정
 ⋯
 constexpr static int kNumClass = 20;
 ⋯
@@ -20,13 +20,20 @@ constexpr static int kInputH = 480;
 constexpr static int kInputW = 480;
 ⋯
 
+3. 빌드
+
 cmake ..
 make
 
+4. 파일 변환
 
 ./yolov5_det -s yolov5s_voc.wts yolov5s_voc.engine s
 
+5. 이미지 테스트
+
 ./yolov5_det -d yolov5s_voc.engine ../images
+
+6. 영상 테스트
 
 cd ..
 
