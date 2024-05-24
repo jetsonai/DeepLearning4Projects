@@ -37,4 +37,9 @@ make
 
 cd ..
 
+cp ~/DeepLearning4Projects/Chap8_5/detect_video.py . 
+
 python3 detect_video.py
+
+## Xavier 에서 yolov5 trt usb 카메라 테스트는 이 예제를 사용하세요. (이 폴더에서 다운받아서 사용)
+detect_usb_camera.py
