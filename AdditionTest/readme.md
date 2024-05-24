@@ -63,7 +63,6 @@ sh prepare_env_in_jetson_jp5.sh
 
 sudo jetson_clocks --fan
 
-## Xavier 에서 usb 카메라 테스트는 이 예제를 사용하세요. (이 폴더에서 다운받아서 사용)
-detect_usb_camera.py
+
 
 
