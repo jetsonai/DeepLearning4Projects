@@ -70,10 +70,9 @@ def plot_one_box_ko(x, img, color=None, label=None, line_thickness=None):
         c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
         cv2.rectangle(img, c1, c2, color, -1, cv2.LINE_AA)  # filled
         
-        #####
         img_pil = Image.fromarray(frame)
         draw = ImageDraw.Draw(img_pil)
-        unicode_font = ImageFont.truetype(font = "NanumGothic.ttf", size=20)
+        unicode_font = ImageFont.truetype(font = "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc", size=20)
         font_color = (255, 255, 255)
         print("c1[0]:{} c1[1] - 2:{}".format(c1[0], c1[1] - 2))
         text_x = max(int(x[0]), margin)
