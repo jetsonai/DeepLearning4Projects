@@ -1,4 +1,4 @@
-## to study PyTorch with official tutorial..
+## To study PyTorch with official tutorial..
 
 https://tutorials.pytorch.kr/beginner/basics/intro.html
 
