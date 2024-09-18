@@ -9,3 +9,7 @@ https://tutorials.pytorch.kr/beginner/basics/intro.html
 5. Save model https://tutorials.pytorch.kr/beginner/basics/saveloadrun_tutorial.html
 6. Torch.nn https://tutorials.pytorch.kr/beginner/nn_tutorial.html
    
+## Install Env for Windows
+
+python -m pip install opencv-python torch torchvision torchaudio
+
