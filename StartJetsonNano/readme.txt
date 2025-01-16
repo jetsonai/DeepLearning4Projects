@@ -32,3 +32,7 @@ sudo reboot
 
 sudo sh -c 'echo 50 > /sys/devices/pwm-fan/target_pwm'
 
+jtop.service
+cd /etc/systemd/system/
+ls
+
