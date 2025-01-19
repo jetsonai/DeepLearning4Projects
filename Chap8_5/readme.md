@@ -38,5 +38,7 @@ cd ~/tensorrtx/yolov5
 
 cp ~/Downloads/yolov5s_voc.wts .
 
-https://github.com/jetsonai/DeepLearning4Projects/blob/main/AdditionTest/YOLO5_TRT_Test.txt
+cp ~/DeepLearning4Projects/Chap8_5/detect_video.py . 
+
+python3 detect_video.py
 
