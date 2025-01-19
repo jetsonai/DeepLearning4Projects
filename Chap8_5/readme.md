@@ -34,6 +34,8 @@ make
 
 ## 터미널을 열고 다음과 같이 실행합니다.
 
+cd ~/tensorrtx/yolov5
+
 cp ~/Downloads/yolov5s_voc.wts .
 
 https://github.com/jetsonai/DeepLearning4Projects/blob/main/AdditionTest/YOLO5_TRT_Test.txt
