@@ -10,7 +10,9 @@ Colab 에서 Convert_YOLOv5_For_tensorrtx.ipynb 파일을 이용하여 yolov5s_v
 
 cd ~/DeepLearning4Projects/Chap8_5
 
-https://github.com/jetsonai/DeepLearning4Projects/blob/main/AdditionTest/prepare_env_in_jetson.sh
+다음의 스크립트를 실행하고
+
+wget https://raw.githubusercontent.com/jetsonai/DeepLearning4Projects/main/AdditionTest/prepare_env_in_jetson.sh
 
 1. 홈 경로의 tensorrtx/yolov5 폴더에서 build 폴더를 생성한 후 yolov5s_voc.wts 파일을 build
 폴더 아래로 이동합니다.
