@@ -1,3 +1,5 @@
+# 실습 방법
+
 cd ~/DeepLearning4Projects/Chap8_5
 
 https://github.com/jetsonai/DeepLearning4Projects/blob/main/AdditionTest/prepare_env_in_jetson.sh
