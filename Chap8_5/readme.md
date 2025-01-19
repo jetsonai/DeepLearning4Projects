@@ -36,9 +36,11 @@ make
 
 ## 터미널을 열고 다음과 같이 실행합니다.
 
-cd ~/tensorrtx/yolov5
+cd ~/tensorrtx/yolov5/build
 
 cp ~/Downloads/yolov5s_voc.wts .
+
+cd ~/tensorrtx/yolov5/
 
 cp ~/DeepLearning4Projects/Chap8_5/detect_video.py . 
 
