@@ -166,40 +166,40 @@ class VGG16withBN(nn.Module) :
 
 
 ########## VGG-19-BN-Like Model Implementation ##########
-class VGG19withBN(nn.Module) :
-    def __init__(self, img_channels, width, num_classes, p) :
-        super().__init__()
+# class VGG19withBN(nn.Module) :
+#     def __init__(self, img_channels, width, num_classes, p) :
+#         super().__init__()
         
-        # Create Convolutional Layer Instance
-        self.conv_block_1 = # Fill-In
-        self.conv_block_2 = # Fill-In
-        self.conv_block_3 = # Fill-In
-        self.conv_block_4 = # Fill-In
-        self.conv_block_5 = # Fill-In
+#         # Create Convolutional Layer Instance
+#         self.conv_block_1 = # Fill-In
+#         self.conv_block_2 = # Fill-In
+#         self.conv_block_3 = # Fill-In
+#         self.conv_block_4 = # Fill-In
+#         self.conv_block_5 = # Fill-In
         
-        # Create Classifier Layer Instance
-        self.classifier = # Fill-In
+#         # Create Classifier Layer Instance
+#         self.classifier = # Fill-In
     
-    def forward(self, x) :
-        x = self.conv_block_1(x) # H x W
-        x = F.max_pool2d(x, 2, 2)
+#     def forward(self, x) :
+#         x = self.conv_block_1(x) # H x W
+#         x = F.max_pool2d(x, 2, 2)
         
-        x = self.conv_block_2(x) # H/2 x W/2
-        x = F.max_pool2d(x, 2, 2)
+#         x = self.conv_block_2(x) # H/2 x W/2
+#         x = F.max_pool2d(x, 2, 2)
         
-        x = self.conv_block_3(x) # H/4 x W/4
-        x = F.max_pool2d(x, 2, 2)
+#         x = self.conv_block_3(x) # H/4 x W/4
+#         x = F.max_pool2d(x, 2, 2)
         
-        x = self.conv_block_4(x) # H/8 x W/8
-        x = F.max_pool2d(x, 2, 2)
+#         x = self.conv_block_4(x) # H/8 x W/8
+#         x = F.max_pool2d(x, 2, 2)
         
-        x = self.conv_block_5(x) # H/16 x W/16
-        x = F.max_pool2d(x, 2, 2)
+#         x = self.conv_block_5(x) # H/16 x W/16
+#         x = F.max_pool2d(x, 2, 2)
         
-        x = F.adaptive_avg_pool2d(x, 1).flatten(start_dim=1)
-        x = self.classifier(x)
+#         x = F.adaptive_avg_pool2d(x, 1).flatten(start_dim=1)
+#         x = self.classifier(x)
         
-        return x
+#         return x
     
 
 ########## Check Model Implementation ##########
