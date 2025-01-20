@@ -1,6 +1,5 @@
 ########## Import Library ##########
 from os import makedirs
-from os.path import join
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,39 +8,27 @@ import torch
 from torch import nn
 from torch import optim
 from torch.utils.data import DataLoader
-from torchvision import transforms
-from torchvision.models import resnet18
+from torchvision import datasets, transforms
 
 from torchmetrics import Accuracy
 from torchsummary import summary
 from tqdm import tqdm
 
-from dataloader import PyTorchCustomDataset
+from vgg import # Fill-In
 from utils import fix_seed, AverageMeter
 
 
 ########## Training Code ##########
-def main(img_channels=3, img_size=224, num_classes=2,
-         lr=1e-4, total_epochs=20, seed=42, batch_size=16,
-         src="cats_and_dogs_filtered") :
+def main(img_channels=1, width=16, img_size=32, num_classes=10, p=0.25,
+         lr=1e-2, total_epochs=5, seed=42, batch_size=64) :
     # Load Dataset
-    train_transform = transforms.Compose([transforms.Resize((img_size, img_size)),
-                                          transforms.RandomHorizontalFlip(0.5),
-                                          transforms.RandomApply([
-                                              transforms.ColorJitter(brightness=0.4, contrast=0.4, 
-                                                                     saturation=0.2, hue=0.1)], p=0.8),
-                                          transforms.ToTensor(),
-                                          transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                                         std=[0.229, 0.224, 0.225])])
-    test_transform = transforms.Compose([transforms.Resize((img_size, img_size)),
-                                         transforms.ToTensor(),
-                                         transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                                         std=[0.229, 0.224, 0.225])])
+    transform = transforms.Compose([transforms.Resize((img_size, img_size)), 
+                                    transforms.ToTensor()])
     
-    # Create Custom Dataset Instance
-    train_dataset = PyTorchCustomDataset(join(src, "train"), train_transform)
-    test_dataset = PyTorchCustomDataset(join(src, "validation"), test_transform)
-    
+    # Download Fashion MNIST Dataset
+    train_dataset = datasets.FashionMNIST("data/", train=True, transform=transform, download=True)
+    test_dataset = datasets.FashionMNIST("data/", train=False, transform=transform, download=True)
+
     # Fix Seed
     fix_seed(seed)
     
@@ -56,19 +43,8 @@ def main(img_channels=3, img_size=224, num_classes=2,
     # Fix Seed
     fix_seed(seed)
     
-    # Create Model Instance    
-    model = resnet18(pretrained=True)
-    
-    # Freeze CNN Backbone
-    for param in model.parameters() :
-        param.requires_grad = # Fill-In
-
-    # Replace Linear Layer
-    num_ftrs = model.fc.in_features
-    model.fc = nn.Linear(num_ftrs, num_classes)
-    
-    # Assign Device
-    model = model.to(device)
+    # Create Model Instance
+    model = # Fill-In
     
     # Summarize Model
     summary(model, (img_channels, img_size, img_size))
@@ -77,7 +53,7 @@ def main(img_channels=3, img_size=224, num_classes=2,
     optimizer = optim.SGD(model.parameters(), lr=lr)
     
     # Create Loss Instance
-    criterion = nn.CrossEntropyLoss()
+    criterion = # Fill-In
     
     # Create Metric Instance
     metric = Accuracy("multiclass", num_classes=num_classes).to(device)
@@ -91,7 +67,7 @@ def main(img_channels=3, img_size=224, num_classes=2,
     test_loss_list, test_acc_list = [], []
     
     # Create Directory
-    ckpt_dir, graph_dir = "ckpt/backbone_unfrozen", "result/backbone_unfrozen"
+    ckpt_dir, graph_dir = "ckpt/vgg16_bn", "result/vgg16_bn"
     makedirs(ckpt_dir, exist_ok=True), makedirs(graph_dir, exist_ok=True)
     
     # Set Best Accuracy
@@ -115,8 +91,8 @@ def main(img_channels=3, img_size=224, num_classes=2,
             
             # Update Classifier Weights
             optimizer.zero_grad()
-            pred = model(img)
-            loss = criterion(pred, label)
+            pred = # Fill-In
+            loss = # Fill-In
             loss.backward()
             optimizer.step()
             
