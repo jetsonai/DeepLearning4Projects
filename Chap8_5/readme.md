@@ -1,4 +1,4 @@
-# 실습 방법
+# YOLOv5 실습 방법
 
 ## wts 파일 만들기
 
@@ -45,4 +45,29 @@ cd ~/tensorrtx/yolov5/
 cp ~/DeepLearning4Projects/Chap8_5/detect_video.py . 
 
 python3 detect_video.py
+
+
+# YOLOv8 실습 방법 ( > Jetpack 4.6 )
+
+## Start Docker Container
+
+DOCKER_ULTRA_NANO_RESTART
+
+DOCKER_ULTRA_NANO_ATTACH
+
+## Check Exercise python files
+
+## Execute Test
+
+python3 yolov8test.py 
+
+## Convert TRT
+
+## Execute TRT Test
+
+python3 yolov8trt_test.py
+
+
+
+
 
