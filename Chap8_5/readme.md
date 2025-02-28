@@ -63,7 +63,9 @@ python3 yolov8test.py
 
 ## Convert TRT
 
-yolo export model=yolov8n.pt format=engine device="dla:0" half=True
+yolo export model=yolov8n.pt format=engine device="dla:0" half=True : X
+
+--> yolo export model=yolov8n.pt format=engine half=True
 
 ## Execute TRT Test
 
