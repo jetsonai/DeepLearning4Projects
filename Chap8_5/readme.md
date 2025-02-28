@@ -47,7 +47,7 @@ cp ~/DeepLearning4Projects/Chap8_5/detect_video.py .
 python3 detect_video.py
 
 
-# YOLOv8 실습 방법 ( > Jetpack 4.6 )
+# YOLOv8 실습 방법 ( > Jetpack 4.6.1 )
 
 ## Start Docker Container
 
