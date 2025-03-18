@@ -4,6 +4,9 @@
 
 Colab 에서 Convert_YOLOv5_For_tensorrtx.ipynb 파일을 이용하여 yolov5s_voc.wts 을 생성시켜줍니다.
 
+%cd
+git clone https://github.com/ultralytics/yolov5
+
 ## Jetson Nano 에서 실행
 
 ### 환경 세팅 (제공된 이미지에는 세팅되어 있으니 스킵해주세요)
