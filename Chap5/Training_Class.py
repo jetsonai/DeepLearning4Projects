@@ -5,9 +5,9 @@ import torchvision.transforms as transforms
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from .Model_Class_From_the_Scratch import MODEL_From_Scratch
-from .Model_Class_Transfer_Learning_MobileNet import MobileNet
-from .Dataset_Class import PyTorch_Classification_Dataset_Class as Dataset
+from Model_Class_From_the_Scratch import MODEL_From_Scratch
+from Model_Class_Transfer_Learning_MobileNet import MobileNet
+from Dataset_Class import PyTorch_Classification_Dataset_Class as Dataset
 
 class PyTorch_Classification_Training_Class():
     def __init__(self
