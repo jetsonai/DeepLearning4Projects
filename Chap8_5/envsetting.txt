@@ -23,3 +23,11 @@ constexpr static int kInputW = 480;
 cmake ..
 
 make
+
+
+sudo docker run --privileged --name DOCKER_ULTRA_NANO -e DISPLAY=unix$DISPLAY -e=QT_X11_NO_MITSHM=1 --ipc=host -it -d --net=host -v /dev/snd:/dev/snd --volume=/docker_job:/docker_job --volume=/home/nvidia:/mnt --volume=/tmp/.X11-unix:/tmp/.X11-unix -v /dev/shm:/dev/shm -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket -v /tmp/argus_socket:/tmp/argus_socket -v /dev/:/dev/ --runtime=nvidia ultralytics/ultralytics:8.3.23-jetson-jetpack4
+
+docker pull ultralytics/ultralytics:8.3.23-jetson-jetpack4
+
+alias DOCKER_ULTRA_NANO_RESTART="sudo docker restart DOCKER_ULTRA_NANO"
+alias DOCKER_ULTRA_NANO_ATTACH="sudo xhost +local: &&  sudo docker exec -i -t  DOCKER_NGC_PYTORCH_MNT /bin/bash"
