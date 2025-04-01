@@ -8,7 +8,7 @@ ultralytics.checks()
 
 from ultralytics import YOLO
 
-trt_model = YOLO("yolov11n.engine")
+trt_model = YOLO("yolo11n.engine")
 
 #results = model(source = 0, show=True, conf=0.3, save=True)
 
