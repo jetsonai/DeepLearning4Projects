@@ -7,7 +7,9 @@ https://drive.google.com/file/d/1NC5DAi0JfDAJaMn9sMZiw2VnMVwwg_5z/view?usp=shari
 
 [2025년 개정판]
 
-https://drive.google.com/file/d/1dDqr0TwEqhcEYuB-7EJ5YUeWte-gCmP3/view?usp=sharing
+https://drive.google.com/file/d/18_6chKwzwK4mfAr1VBESuFpSzU_x53PD/view?usp=sharing
+
+* 반드시 압축을 해제하여 sd카드에 구워주십시오. (balena echer 이용)
 
 * 기본 젯팩 이미지를 4.6.1 로 올렸기 때문에 기존 예제 동작도 모두 가능하며
 * 추가적으로 도커 환경을 이용한 Ultralytics 예제 실습도 가능합니다.
