@@ -13,6 +13,8 @@ https://drive.google.com/file/d/18_6chKwzwK4mfAr1VBESuFpSzU_x53PD/view?usp=shari
 
 * 기본 젯팩 이미지를 4.6.1 로 올렸기 때문에 기존 예제 동작도 모두 가능합니다.
 
+젯슨 나노에 설치한 쿨링팬이 돌지 않는 경우 터미널에서 다음과 같이 입력해주십시오.
+
 sudo sh -c 'echo 150 > /sys/devices/pwm-fan/target_pwm'
 
 
