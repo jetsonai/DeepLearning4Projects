@@ -1,0 +1,1 @@
+yolo export model=yolov11n.pt format=engine half=True imgsz=480,480
