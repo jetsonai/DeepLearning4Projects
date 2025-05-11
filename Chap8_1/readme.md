@@ -7,7 +7,7 @@ https://drive.google.com/file/d/1NC5DAi0JfDAJaMn9sMZiw2VnMVwwg_5z/view?usp=shari
 
 [2025년 개정판]
 
-https://drive.google.com/file/d/1-bWD5sqWpxXbLTselkKulR8FyQdUXOr-/view?usp=sharing
+https://drive.google.com/file/d/1Bcx2Nl7ueJ_zm1HVf1OhPICYDV_zUIsR/view?usp=sharing
 
 
 * 다운받으신 이미지 압축 파일을 해제하지 않고 BalenaEtcher 에서 바로 선택하여 사용하실 수 있습니다.
