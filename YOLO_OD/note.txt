@@ -1,0 +1,16 @@
+## engine 파일 생성하는 방법
+  ### 젯슨나노가 아니라면 imgsz=480,480 는 안하셔도 됩니다.
+
+yolo export model=yolov11n.pt format=engine half=True imgsz=480,480
+
+
+## 예제
+
+화면 안에 ROI 안에 사람이 보이면 몇명인지 화면 위에 표시하도록 코드를 수정해보세요
+guestcount = 0
+guestcount = guestcount+1
+infotext = "guest count : {}".format(guestcount)
+cv2.putText(frame, infotext, (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.8,(0,250,250), 2)
+이미지
+이렇게 노란 박스 안에 있는 사람만 카운트 되도록 코드를 수정해보세요
+
