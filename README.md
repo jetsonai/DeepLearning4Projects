@@ -1,7 +1,8 @@
 # DeepLearning4Projects
 
-유투브
+트랙 예제 다운로드
 
-https://www.youtube.com/channel/UCjNAGDGnTtlIC4C0L59K8ig
+https://drive.google.com/file/d/17iNM35IjHJud2ry-ZX7UPxqvGHs6GA6m/view?usp=sharing
+
 
 
